@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objets connectés et non connectés</title>
+    <meta
+      name="description"
+      content="Site d'exercices de 9e année en informatique sur les objets connectés et non connectés."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="container nav">
+        <div class="brand">Info 9e</div>
+        <div class="nav-links">
+          <a href="#cours">Cours</a>
+          <a href="#exercices">Exercices</a>
+          <a href="#quiz">Quiz</a>
+          <a href="#correction">Correction</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-content">
+          <div class="hero-text">
+            <p class="tag">Informatique - 9e année</p>
+            <h1>Objets connectés et non connectés</h1>
+            <p class="subtitle">
+              Découvre la différence entre les objets qui échangent des données et
+              ceux qui fonctionnent seul, sans réseau.
+            </p>
+            <div class="hero-actions">
+              <a href="#exercices" class="btn primary">Commencer les exercices</a>
+              <a href="#cours" class="btn secondary">Voir le cours</a>
+            </div>
+          </div>
+          <div class="hero-card">
+            <div class="mini-card">
+              <span class="label">Exemple</span>
+              <strong>Montre intelligente</strong>
+              <small>Connecté</small>
+            </div>
+            <div class="mini-card neutral">
+              <span class="label">Exemple</span>
+              <strong>Stylo</strong>
+              <small>Non connecté</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="cours" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Leçon</p>
+            <h2>Définition</h2>
+          </div>
+
+          <div class="grid-2">
+            <article class="info-box connected">
+              <h3>Objet connecté</h3>
+              <p>
+                Un objet connecté est un appareil capable d’échanger des données avec
+                d’autres appareils ou avec Internet via un réseau. Il utilise souvent
+                des capteurs, des logiciels et des modules de communication.
+              </p>
+              <ul>
+                <li>Smartphone</li>
+                <li>Montre connectée</li>
+                <li>Thermostat intelligent</li>
+                <li>Lampe connectée</li>
+              </ul>
+            </article>
+
+            <article class="info-box unconnected">
+              <h3>Objet non connecté</h3>
+              <p>
+                Un objet non connecté fonctionne sans réseau ni connexion Internet. Il
+                remplit sa fonction de manière autonome, sans échange de données à
+                distance.
+              </p>
+              <ul>
+                <li>Chaise</li>
+                <li>Table</li>
+                <li>Réveille-matin mécanique</li>
+                <li>Lampe simple</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="comparison">
+            <h3>Comparez</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>Critère</th>
+                  <th>Objet connecté</th>
+                  <th>Objet non connecté</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Connexion</td>
+                  <td>Oui, avec Internet ou un réseau</td>
+                  <td>Non</td>
+                </tr>
+                <tr>
+                  <td>Échange de données</td>
+                  <td>Oui</td>
+                  <td>Non</td>
+                </tr>
+                <tr>
+                  <td>Automatisation</td>
+                  <td>Souvent possible</td>
+                  <td>Très limitée</td>
+                </tr>
+                <tr>
+                  <td>Exemple</td>
+                  <td>Voiture connectée</td>
+                  <td>Bicyclette classique</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section id="exercices" class="section alt">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Exercices</p>
+            <h2>Classer les objets</h2>
+          </div>
+
+          <div class="classification-game">
+            <div class="object-list" id="objectList"></div>
+            <div class="classification-panel">
+              <button class="btn connected-btn" data-category="connecte">Objet connecté</button>
+              <button class="btn unconnected-btn" data-category="non-connecte">Objet non connecté</button>
+            </div>
+          </div>
+
+          <div class="exercise-box">
+            <h3>Question 1 : Quel objet est connecté ?</h3>
+            <p>Choisis la bonne réponse.</p>
+            <div class="mcq" id="mcqOne">
+              <button class="choice" data-correct="false">Lampe ordinaire</button>
+              <button class="choice" data-correct="true">Télécommande intelligente</button>
+              <button class="choice" data-correct="false">Livre</button>
+              <button class="choice" data-correct="false">Balle</button>
+            </div>
+            <p class="feedback" id="feedbackOne"></p>
+          </div>
+
+          <div class="exercise-box">
+            <h3>Question 2 : Pourquoi un objet est-il connecté ?</h3>
+            <div class="mcq" id="mcqTwo">
+              <button class="choice" data-correct="false">Parce qu’il est lourd</button>
+              <button class="choice" data-correct="true">Parce qu’il peut communiquer avec d’autres appareils</button>
+              <button class="choice" data-correct="false">Parce qu’il est fabriqué en métal</button>
+              <button class="choice" data-correct="false">Parce qu’il se déplace seul</button>
+            </div>
+            <p class="feedback" id="feedbackTwo"></p>
+          </div>
+        </div>
+      </section>
+
+      <section id="quiz" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Quiz</p>
+            <h2>Teste tes connaissances</h2>
+          </div>
+
+          <div id="quizApp" class="quiz-app"></div>
+        </div>
+      </section>
+
+      <section id="correction" class="section alt">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Correction</p>
+            <h2>Réponses utiles</h2>
+          </div>
+
+          <div class="correction-grid">
+            <article class="correction-card">
+              <h3>1. Un objet connecté...</h3>
+              <p>Peut communiquer à travers un réseau ou Internet.</p>
+            </article>
+            <article class="correction-card">
+              <h3>2. Un objet non connecté...</h3>
+              <p>Travaille seul et ne transmet pas de données.</p>
+            </article>
+            <article class="correction-card">
+              <h3>3. Exemple concret</h3>
+              <p>Une montre intelligente est connectée, alors qu’un crayon n’est pas connecté.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© 2026 - Exercices Informatique 9e année</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
